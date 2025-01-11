@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="869.0" style="-fx-background-color: #604ea5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <children>
+        <AnchorPane layoutY="68.0" prefHeight="397.0" prefWidth="870.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <VBox fx:id="tableBox" prefHeight="408.0" prefWidth="671.0" />
+            <Label layoutX="686.0" layoutY="56.0" text="Скачать таблицы">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="808.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/table.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="downloadTablesButton" layoutX="798.0" layoutY="46.0" mnemonicParsing="false" onAction="#onClickDownloadTables" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+            <Label layoutX="686.0" layoutY="106.0" text="Скачать журнал">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="803.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/log.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="downloadLogsButton" layoutX="798.0" layoutY="97.0" mnemonicParsing="false" onAction="#onClickDownloadLogs" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+            <Label layoutX="686.0" layoutY="151.0" prefHeight="70.0" prefWidth="103.0" text="Диаграмма &#10;загрузки &#10;по палатам, %">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="33.0" layoutX="807.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/diagram.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="openDiagramButton" layoutX="798.0" layoutY="167.0" mnemonicParsing="false" onAction="#onClickOpenDiagram" opacity="0.0" prefHeight="40.0" prefWidth="50.0" text="Button" />
+         </children></AnchorPane>
+      <MenuButton fx:id="tableSelection" layoutX="165.0" layoutY="21.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #fafafa;" text="Таблица:">
+        <items>
+          <MenuItem fx:id="peopleItem" mnemonicParsing="false" onAction="#onClickTableSelection" text="пациенты" />
+          <MenuItem fx:id="wardItem" mnemonicParsing="false" onAction="#onClickTableSelection" text="палаты" />
+            <MenuItem fx:id="diagnosisItem" mnemonicParsing="false" onAction="#onClickTableSelection" text="диагнозы" />
+        </items>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MenuButton>
+      <Button fx:id="exitButton" layoutX="20.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickExitButton" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #604ea5; -fx-border-color: #fafafa; -fx-border-radius: 3%;" text="Выход" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="addButton" layoutX="328.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickAddButton" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #fafafa;" text="добавить">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="441.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickDeleteButton" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #fafafa;" text="удалить">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateButton" layoutX="544.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickUpdateButton" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #fafafa;" text="редактировать">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <HBox layoutX="672.0" layoutY="21.0" prefHeight="30.0" prefWidth="194.0">
+         <opaqueInsets>
+            <Insets left="10.0" right="10.0" />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="userNameField" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="70.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="6.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="image" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="6.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
